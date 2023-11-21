@@ -1,1 +1,16 @@
-<p>transactionlist works!</p>
+<div>
+  <h3>History</h3>
+  <ul id="list" class="list">
+    @for(transaction of transactions; track transaction.id) {
+    <li
+      [class.plus]="transaction.amount >= 0"
+      [class.minus]="transaction.amount < 0"
+    >
+      {{ transaction.text }} <span>${{ transaction.amount }}</span>
+      <button class="delete-btn" (click)="onTransactionDeleted(transaction.id)">
+        x
+      </button>
+    </li>
+    }
+  </ul>
+</div>

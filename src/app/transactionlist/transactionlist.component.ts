@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-transactionlist',
+  selector: 'app-transaction-list',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './transactionlist.component.html',
-  styles: ``,
 })
-export class TransactionlistComponent {}
+export class TransactionListComponent {
+  @Input() transactions: any[] = [];
+  @Output() transactionDeleted = new EventEmitter<number>();
+
+  onTransactionDeleted(id: number) {
+    this.transactionDeleted.emit(id);
+  }
+}

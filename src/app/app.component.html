@@ -1,0 +1,17 @@
+<div>
+  <app-header></app-header>
+  <div class="container">
+    <app-balance [total]="total"></app-balance>
+    <app-income-expense
+      [income]="income"
+      [expenses]="expenses"
+    ></app-income-expense>
+    <app-transaction-list
+      [transactions]="transactions"
+      (transactionDeleted)="handleTransactionDeleted($event)"
+    ></app-transaction-list>
+    <app-add-transaction
+      (transactionSubmitted)="handleTransactionSubmitted($event)"
+    ></app-add-transaction>
+  </div>
+</div>
