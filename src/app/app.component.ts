@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
-import { SnackbarService } from '../services/snackbar.service';
+import { SnackbarService } from './services/snackbar.service';
 
-import { HeaderComponent } from './header/header.component';
-import { BalanceComponent } from './balance/balance.component';
-import { IncomeExpenseComponent } from './incomeexpense/incomeexpense.component';
-import { AddtransactionComponent } from './addtransaction/addtransaction.component';
-import { TransactionListComponent } from './transactionlist/transactionlist.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BalanceComponent } from './components/balance/balance.component';
+import { IncomeExpenseComponent } from './components/incomeexpense/incomeexpense.component';
+import { AddtransactionComponent } from './components/addtransaction/addtransaction.component';
+import { TransactionListComponent } from './components/transactionlist/transactionlist.component';
 
 @Component({
   selector: 'app-root',
